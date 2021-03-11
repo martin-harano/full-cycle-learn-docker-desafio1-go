@@ -1,0 +1,20 @@
+###########################
+# Build application stage
+###########################
+FROM golang:1.16.1-alpine AS builder
+
+WORKDIR $GOPATH/src/codeedurocks/app/
+
+COPY src/ .
+
+RUN go build -o /go/bin/ ./code-edu-rocks.go 
+
+##########################
+# Build small image stage
+##########################
+FROM scratch
+WORKDIR /app
+
+COPY --from=builder /go/bin/code-edu-rocks .
+
+ENTRYPOINT ["./code-edu-rocks"]
