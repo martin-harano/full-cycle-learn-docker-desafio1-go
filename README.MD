@@ -1,7 +1,7 @@
 
 # FULL-CYCLE-2.0 - Docker - DESAFIO 1 
 
-Este projeto cria um container com uma aplicação em GO que exibe o seguinte resultado no STDOUT:do ``Code.education Rocks!``
+Este projeto cria um container com uma aplicação em GO que exibe o seguinte resultado no STDOUT: ``Code.education Rocks!``
 
 ## Para executar a imagem carregada no Docker Hub
 
